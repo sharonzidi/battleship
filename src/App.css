@@ -47,17 +47,34 @@ li {
 	cursor: pointer;
 }
 
+.guess-item:hover {
+	cursor: pointer;
+	background-color: green;
+}
+
+.miss:hover {
+	background-color: rgb(5, 190, 252);
+}
+
+.hit:hover {
+	background-color:red;
+}
+
 .ship {
 	color: white;
 	background-color: black;
 }
 
 .miss {
-	background-color: white;
+	background-color: rgb(5, 190, 252);
 }
 
 .hit {
 	background-color: red;
+}
+
+.hits {
+	background-color: orange;
 }
 
 .logs {
@@ -96,9 +113,4 @@ li {
 
 .sunk-log > h3 {
 	margin-bottom: 0;
-}
-
-.notes {
-	text-align: left;
-	padding: 0 30px;
 }
