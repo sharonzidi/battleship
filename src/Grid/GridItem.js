@@ -7,7 +7,7 @@ export default function GridItem(props) {
 	const winner = useSelector((state) => state.winner);
 	const myBoard = useSelector((state) => state.myBoard);
 	const char = props.symbol;
-	const clickGrid = () => {
+	let clickGrid = () => {
 		if (winner) return;
 		if (char === '3' || char === '4') {
 			return;
@@ -20,7 +20,6 @@ export default function GridItem(props) {
 		}
 		dispatch({
             type: 'MY_TURN',
-			val: props.symbol,
 			mx: fireX,
 			my: fireY,
             x: props.x,
@@ -30,7 +29,7 @@ export default function GridItem(props) {
 	return (
 		<div className={`row-item guess-item ${char === '3' ? 'miss' : null} ${char === '4' ? 'hit' : null}`}
 			onClick={clickGrid}>
-			<span>{char === '1' ? '1' : char === '2' ? '2' : char === '3' ? 'M' : 'H'}</span>
+			<div>{char === '3' ? 'M' : char === '4' ? 'H' : ''}</div>
 		</div>
 	);
 }

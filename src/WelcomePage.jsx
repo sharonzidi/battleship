@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function WelcomePage() {
 
-    return (<div class="WelcomePage">
+    return (<div className="WelcomePage">
         <h1>Welcome to Battleship!</h1>
         <ul>
             <li><Link to={"/App"}>Normal Game Mode</Link></li>
