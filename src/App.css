@@ -12,6 +12,12 @@ li {
 	list-style: none;
 }
 
+.board {
+	display: grid;
+    grid-template-columns: repeat(10, 35px);
+    grid-template-rows: repeat(10, 35px);
+}
+
 .board-layout {
 	display: flex;
 	justify-content: space-evenly;
@@ -47,58 +53,28 @@ li {
 	cursor: pointer;
 }
 
+.guess-item:hover {
+	cursor: pointer;
+	background-color: green;
+}
+
+.miss:hover {
+	background-color: rgb(5, 190, 252);
+}
+
+.hit:hover {
+	background-color:red;
+}
+
 .ship {
 	color: white;
 	background-color: black;
 }
 
 .miss {
-	background-color: white;
+	background-color: rgb(5, 190, 252);
 }
 
 .hit {
 	background-color: red;
-}
-
-.logs {
-	display: flex;
-	flex-direction: column;
-}
-
-.game-info {
-	display: flex;
-	justify-content: center;
-}
-
-.game-info > div {
-	width: 50%;
-}
-
-.sunk-log {
-	text-align: center;
-}
-
-.sunk {
-	display: flex;
-	justify-content: space-between;
-	text-align: center;
-}
-
-.sunk > div {
-	width: 50%;
-}
-
-.sunk-ships {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-}
-
-.sunk-log > h3 {
-	margin-bottom: 0;
-}
-
-.notes {
-	text-align: left;
-	padding: 0 30px;
 }

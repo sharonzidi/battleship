@@ -1,22 +1,22 @@
 import React from 'react';
-import Controls from './Components/Controls';
-import Grid from './Components/Grid/Grid';
-import GameBoard from './Components/Grid/GameBoard';
+import MyBoard from './Grid/MyBoard';
+import EnemyBoard from './Grid/EnemyBoard';
 import './App.css';
+import Controller from './Controller';
 
 function App() {
 	return (
 		<div className="App">
 			<div className="title">
 				<h1>Battleship Normal Game Mode</h1>
-				<Controls />
+				<Controller />
 			</div>
 			<div className="board-layout">
 				<div>
-					<Grid />
+					<MyBoard />
 				</div>
 				<div>
-					<GameBoard />
+					<EnemyBoard />
 				</div>
 			</div>
 		</div>
