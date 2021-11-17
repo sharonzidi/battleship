@@ -39,7 +39,9 @@ export default function reducers(state = defaultState, action) {
 		if (count1 === 0) {
 			state.winner = 'Player';
 		} else if (count2 === 0) {
-			state.winner = 'AI';
+			if (!state.winner) {
+				state.winner = 'AI';
+			}
 		}
 		return state;
 	}
