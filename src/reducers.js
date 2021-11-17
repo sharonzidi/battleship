@@ -7,6 +7,7 @@ const defaultState = {
 };
 
 export default function reducers(state = defaultState, action) {
+	console.log(action.type);
 	if (action.type === 'MY_TURN') {
 		const value1 = state.enemyBoard[action.x][action.y];
 		const value2 = state.myBoard[action.mx][action.my];
@@ -43,6 +44,8 @@ export default function reducers(state = defaultState, action) {
 				state.winner = 'AI';
 			}
 		}
+
+		console.log("returned state");
 		return state;
 	}
 	return defaultState;

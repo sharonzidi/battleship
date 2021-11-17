@@ -1,0 +1,64 @@
+
+.WelcomePage {
+    display:inline-table;
+    align-items:center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    text-decoration: none;
+ }
+
+
+h1 {
+    padding-left: 2%;
+    color: white;
+    font-family:Arial Black;
+    font-weight: bolder;
+    text-align: center;
+    position: absolute;
+    top: 30%;
+}
+
+.intro {
+    padding: 2%;
+    color: white;
+    font-size: small;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bolder;
+    text-align: left;
+    position: absolute;
+    top: 45%;
+    padding-left: 2%;
+    padding-right: 55%;
+}
+
+.btn_list {
+    display: grid;
+    gap: 10px;
+}
+
+.ship-image {
+    height:100vh;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("https://wallpaperaccess.com/full/1486722.jpg");
+    background-position: 50% 50%; 
+}
+
+.overlay {
+    position:relative;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: -10vw;
+    clip-path: polygon(0 0, 84% 0, 59% 100%, 0% 100%);
+}

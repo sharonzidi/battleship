@@ -1,7 +1,7 @@
 import React from 'react';
 import MyBoard from './Grid/MyBoard';
 import EnemyBoard from './Grid/EnemyBoard';
-import './App.css';
+import './Css/App.css';
 import Controller from './Controller';
 
 function App() {
