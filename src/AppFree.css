@@ -1,0 +1,80 @@
+.title {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.WelcomePage {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+li {
+	list-style: none;
+}
+
+.board {
+	display: grid;
+    grid-template-columns: repeat(10, 35px);
+    grid-template-rows: repeat(10, 35px);
+}
+
+.board-layout {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.grid-header {
+	display: flex;
+}
+
+.grid-container {
+	display: flex;
+}
+
+.col {
+	display: flex;
+	flex-direction: column;
+}
+
+.row {
+	display: flex;
+}
+
+.row-item {
+	border: 1px solid black;
+	padding: 10px;
+	width: 15px;
+	height: 15px;
+	text-align: center;
+	background-color: lightgray;
+}
+
+.guess-item {
+	cursor: pointer;
+}
+
+.guess-item:hover {
+	cursor: pointer;
+	background-color: green;
+}
+
+.miss:hover {
+	background-color: rgb(5, 190, 252);
+}
+
+.hit:hover {
+	background-color:red;
+}
+
+.ship {
+	color: white;
+	background-color: black;
+}
+
+.miss {
+	background-color: rgb(5, 190, 252);
+}
+
+.hit {
+	background-color: red;
+}
