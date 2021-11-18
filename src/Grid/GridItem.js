@@ -7,7 +7,9 @@ export default function GridItem(props) {
 	const winner = useSelector((state) => state.winner);
 	const myBoard = useSelector((state) => state.myBoard);
 	const char = props.symbol;
-	let clickGrid = () => {
+	const xx = props.x;
+	const yy = props.y;
+	const clickGrid = () => {
 		if (winner) return;
 		if (char === '3' || char === '4') {
 			return;
@@ -26,6 +28,7 @@ export default function GridItem(props) {
             y: props.y,
         })
 	};
+	console.log(JSON.stringify(char));
 	return (
 		<div className={`row-item guess-item ${char === '3' ? 'miss' : null} ${char === '4' ? 'hit' : null}`}
 			onClick={clickGrid}>
