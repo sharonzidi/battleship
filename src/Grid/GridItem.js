@@ -7,28 +7,34 @@ export default function GridItem(props) {
 	const winner = useSelector((state) => state.winner);
 	const myBoard = useSelector((state) => state.myBoard);
 	const char = props.symbol;
-	const xx = props.x;
-	const yy = props.y;
+	const free = props.isFree;
 	const clickGrid = () => {
 		if (winner) return;
 		if (char === '3' || char === '4') {
 			return;
 		}
-		let fireX = Math.floor(Math.random()*10);
-		let fireY = Math.floor(Math.random()*10);
-		while (myBoard[fireX][fireY] === '3' || myBoard[fireX][fireY] === '4') {
-			fireX = Math.floor(Math.random()*10);
-			fireY = Math.floor(Math.random()*10);
+		if (free === 0) {
+			let fireX = Math.floor(Math.random()*10);
+			let fireY = Math.floor(Math.random()*10);
+			while (myBoard[fireX][fireY] === '3' || myBoard[fireX][fireY] === '4') {
+				fireX = Math.floor(Math.random()*10);
+				fireY = Math.floor(Math.random()*10);
+			}
+			dispatch({
+				type: 'MY_TURN',
+				mx: fireX,
+				my: fireY,
+				x: props.x,
+				y: props.y,
+			})
+		} else {
+			dispatch({
+				type: 'FREE_TURN',
+				x: props.x,
+				y: props.y,
+			})
 		}
-		dispatch({
-            type: 'MY_TURN',
-			mx: fireX,
-			my: fireY,
-            x: props.x,
-            y: props.y,
-        })
 	};
-	console.log(JSON.stringify(char));
 	return (
 		<div className={`row-item guess-item ${char === '3' ? 'miss' : null} ${char === '4' ? 'hit' : null}`}
 			onClick={clickGrid}>

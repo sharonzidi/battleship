@@ -43,7 +43,34 @@ export default function reducers(state = defaultState, action) {
 				state.winner = 'AI';
 			}
 		}
-		return state;
+		const newState = {};
+		newState.myBoard = [...state.myBoard];
+		newState.enemyBoard = [...state.enemyBoard];
+		newState.winner = state.winner;
+		return newState;
+	} else if (action.type === 'FREE_TURN') {
+		const value = state.enemyBoard[action.x][action.y];
+		if (value === '1') {
+			state.enemyBoard[action.x][action.y] = '3';
+		} else if (value === '2') {
+			state.enemyBoard[action.x][action.y] = '4';
+		}
+		let count = 0;
+		for (let i = 0; i < 10; i++) {
+			for (let j = 0; j < 10; j++) {
+				if (state.enemyBoard[i][j] === '2') {
+					count++;
+				}
+			}
+		}
+		if (count === 0) {
+			state.winner = 'Player';
+		}
+		const newState = {};
+		newState.myBoard = [...state.myBoard];
+		newState.enemyBoard = [...state.enemyBoard];
+		newState.winner = state.winner;
+		return newState;
 	}
 	return defaultState;
 }
