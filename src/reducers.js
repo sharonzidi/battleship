@@ -71,6 +71,15 @@ export default function reducers(state = defaultState, action) {
 		newState.enemyBoard = [...state.enemyBoard];
 		newState.winner = state.winner;
 		return newState;
+	} else if (action.type === 'RESET') {
+		state.myBoard = initBoard();
+		state.enemyBoard = initBoard();
+		state.winner = '';
+        const newState = {};
+		newState.myBoard = [...state.myBoard];
+		newState.enemyBoard = [...state.enemyBoard];
+		newState.winner = state.winner;
+		return newState;
 	}
 	return defaultState;
 }

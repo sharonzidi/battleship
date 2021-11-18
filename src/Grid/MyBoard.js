@@ -15,7 +15,7 @@ export default function MyBoard() {
 										className={`${col === '1' ? 'row-item' : 'row-item ship'} ${
 											col === '4' ? 'hit' : col === '3' ? 'miss' : null
 										}`}>
-										{col === '1' ? '1' : col === '2' ? 'S' : col === '3' ? 'M' : 'H'}
+										{col === '1' ? '' : col === '2' ? 'S' : col === '3' ? 'M' : 'H'}
 									</span>
 								))}
 							</div>
