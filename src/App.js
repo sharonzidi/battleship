@@ -3,6 +3,7 @@ import MyBoard from './Grid/MyBoard';
 import EnemyBoard from './Grid/EnemyBoard';
 import './Css/App.css';
 import Controller from './Controller';
+import 'bootstrap/dist/css/bootstrap.css';
 
 function App() {
 	return (

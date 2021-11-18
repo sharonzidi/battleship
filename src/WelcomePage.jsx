@@ -27,11 +27,6 @@ export default function WelcomePage() {
                     </ul>
              
                     <h1>Welcome to Battleship Game!</h1>
-                    {/* <div className="btn_list">
-                        <Link to={"/App"}><button type="button" class="btn btn-danger">Normal Game Mode</button></Link>
-                        <Link to={"/AppFree"}><button type="button" class="btn btn-warning">Free Game Mode</button></Link>
-                        <Link to={"/Rules"}><button type="button" class="btn btn-info">Rules</button></Link>
-                    </div> */}
                     <p className="intro">Battleship is known worldwide as a pencil and paper game which dates from World War I. It was published by various companies as a pad-and-pencil game in the 1930s, and was released as a plastic
                         board game by Milton Bradley in 1967. The game has spawned electronic versions, video games, smart device apps and a film.</p>
 
