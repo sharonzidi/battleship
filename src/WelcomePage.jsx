@@ -16,7 +16,7 @@ export default function WelcomePage() {
                             <Link style={{ textDecoration: 'none' }} to={"/App"}><a class="nav-link text-white" >Normal Game Mode</a></Link>
                         </li>
                         <li class="nav-item">
-                            <Link style={{ textDecoration: 'none' }} to={"/AppFree"}><a class="nav-link text-white">Free Game Mode</a></Link>
+                            <Link style={{ textDecoration: 'none' }} to={"/Appfree"}><a class="nav-link text-white">Free Game Mode</a></Link>
                         </li>
                         <li class="nav-item">
                             <Link style={{ textDecoration: 'none' }} to={"/Reset"}><a class="nav-link text-white">Reset</a></Link>
