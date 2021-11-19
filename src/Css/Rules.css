@@ -8,14 +8,14 @@
 
 .description {
     font-family: 'Courier New', Courier, monospace;
-    font-size: small;
+    font-size: x-large;
     padding-top: 10%;
     padding-left: 20%;
     padding-right: 5%;
 }  
 .detail {
     font-family: 'Courier New', Courier, monospace;
-    font-size: small;
+    font-size: large;
     font-weight: bolder;
     padding-left: 20%;
     padding-right: 30px;
