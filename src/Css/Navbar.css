@@ -27,7 +27,7 @@ ul {
 
 @media screen and (max-width: 800px){
     ul {
-        width: 200px;
+        width: 100vw;
         list-style-type: none;
         margin: 0;
         padding: 0;
