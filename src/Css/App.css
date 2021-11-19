@@ -55,15 +55,15 @@ li {
 
 .guess-item:hover {
 	cursor: pointer;
-	background-color: green;
+	background-color: #80b918;
 }
 
 .miss:hover {
-	background-color: rgb(5, 190, 252);
+	background-color: #48bfe3;
 }
 
 .hit:hover {
-	background-color:red;
+	background-color:#ff7b00;
 }
 
 .ship {
@@ -72,9 +72,9 @@ li {
 }
 
 .miss {
-	background-color: rgb(5, 190, 252);
+	background-color: #48bfe3;
 }
 
 .hit {
-	background-color: red;
+	background-color: #ff7b00;
 }

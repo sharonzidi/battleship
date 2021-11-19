@@ -7,7 +7,7 @@ function Appfree() {
 	return (
 		<div className="App">
 			<div className="title">
-				<h1>Battleship Free Game Mode</h1>
+				<h2>Battleship Free Game Mode</h2>
 				<Controller />
 			</div>
 			<div className="board-layout">

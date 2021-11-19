@@ -10,12 +10,14 @@ import reducers from './reducers';
 import { BrowserRouter as Router, Routes, Route,} from 'react-router-dom';
 import WelcomePage from './WelcomePage';
 import Rules from './Rules';
+import Navbar from './Navbar';
 
 const store = createStore(reducers);
 
 ReactDOM.render(
 	<Provider store={store}>
 		<Router>
+			<Navbar />
 			<Routes>
 				<Route path="/" element={<WelcomePage />} />
 				<Route path="/App" element={<App />} />
