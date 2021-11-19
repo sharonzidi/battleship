@@ -1,15 +1,55 @@
-.navbarContainer{
-    display: flex;
+ul {
     width: 100vw;
-    gap: 50px;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    font-weight: bold;
-    font-size: 15px;
-    height: 4vw;
-}
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    display: inline-block;
+    
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #111;
+  }
 
-a {
-    color: black;
-}
+
+@media screen and (max-width: 800px){
+    ul {
+        width: 100vw;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+      }
+      
+      li a {
+        display: block;
+        color: white;
+        padding: 8px 16px;
+        text-decoration: none;
+      }
+      
+      /* Change the link color on hover */
+      li a:hover {
+        background-color: #111;
+        color: white;
+      }
+
+
+
+    }
+
+
