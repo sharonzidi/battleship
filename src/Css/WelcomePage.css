@@ -11,6 +11,8 @@
 
 
 h1 {
+    position: fixed;
+    z-index: 5;
     padding-left: 2%;
     color: white;
     font-family:Arial Black;
@@ -21,6 +23,8 @@ h1 {
 }
 
 .intro {
+    position: fixed;
+    z-index: 5;
     padding: 2%;
     color: white;
     font-size: small;
@@ -39,6 +43,7 @@ h1 {
 }
 
 .ship-image {
+    z-index: -20;
     height:100vh;
     position: relative;
     background-size: cover;
@@ -48,6 +53,7 @@ h1 {
 }
 
 .overlay {
+    z-index: -10;
     position:relative;
     height: 100%;
     width: 100%;

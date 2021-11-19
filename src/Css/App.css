@@ -18,6 +18,16 @@ li {
     grid-template-rows: repeat(10, 35px);
 }
 
+@media screen and (max-width: 800px){
+	.board-layout {
+		position: flex;
+		flex-direction: column;
+		gap: 20px;
+		align-items: center;
+	}
+
+}
+
 .board-layout {
 	display: flex;
 	justify-content: space-evenly;
