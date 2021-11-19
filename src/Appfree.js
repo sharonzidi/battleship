@@ -12,7 +12,7 @@ function Appfree() {
 			</div>
 			<div className="board-layout">
 				<div>
-					<EnemyBoard symbol ={1}/>
+					<EnemyBoard symbol={1} />
 				</div>
 			</div>
 		</div>

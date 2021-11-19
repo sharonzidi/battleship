@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import AppFree from './AppFree';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
@@ -19,6 +20,7 @@ ReactDOM.render(
 			<Routes>
 				<Route path="/" element={<WelcomePage />} />
 				<Route path="/App" element={<App />} />
+				<Route path="/AppFree" element={<AppFree />} />
 				<Route path="/Rules" element={<Rules />} />
 				<Route path="/Appfree" element={<Appfree />} />
 			</Routes>
