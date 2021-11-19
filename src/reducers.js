@@ -34,20 +34,6 @@ export default function reducers(state = defaultState, action) {
 				if (state.myBoard[i][j] === '2') {
 					count2++;
 				}
-<<<<<<< HEAD
-			}
-		}
-		if (count1 === 0) {
-			state.winner = 'Player';
-		} else if (count2 === 0) {
-			if (!state.winner) {
-				state.winner = 'AI';
-			}
-		}
-
-		console.log("returned state");
-		return state;
-=======
 			}
 		}
 		if (count1 === 0) {
@@ -94,7 +80,6 @@ export default function reducers(state = defaultState, action) {
 		newState.enemyBoard = [...state.enemyBoard];
 		newState.winner = state.winner;
 		return newState;
->>>>>>> origin/master
 	}
 	return defaultState;
 }
