@@ -10,7 +10,7 @@ import reducers from './reducers';
 import { BrowserRouter as Router, Routes, Route,} from 'react-router-dom';
 import WelcomePage from './WelcomePage';
 import Rules from './Rules';
-// import 'bootstrap/dist/css/bootstrap.css';
+import Appfree from './Appfree';
 
 const store = createStore(reducers);
 
@@ -22,6 +22,7 @@ ReactDOM.render(
 				<Route path="/App" element={<App />} />
 				<Route path="/AppFree" element={<AppFree />} />
 				<Route path="/Rules" element={<Rules />} />
+				<Route path="/Appfree" element={<Appfree />} />
 			</Routes>
 		</Router>
 	</Provider>,

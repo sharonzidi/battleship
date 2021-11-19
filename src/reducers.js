@@ -7,7 +7,6 @@ const defaultState = {
 };
 
 export default function reducers(state = defaultState, action) {
-	console.log(action.type);
 	if (action.type === 'MY_TURN') {
 		const value1 = state.enemyBoard[action.x][action.y];
 		const value2 = state.myBoard[action.mx][action.my];
@@ -35,6 +34,7 @@ export default function reducers(state = defaultState, action) {
 				if (state.myBoard[i][j] === '2') {
 					count2++;
 				}
+<<<<<<< HEAD
 			}
 		}
 		if (count1 === 0) {
@@ -47,6 +47,54 @@ export default function reducers(state = defaultState, action) {
 
 		console.log("returned state");
 		return state;
+=======
+			}
+		}
+		if (count1 === 0) {
+			state.winner = 'Player';
+		} else if (count2 === 0) {
+			if (!state.winner) {
+				state.winner = 'AI';
+			}
+		}
+		const newState = {};
+		newState.myBoard = [...state.myBoard];
+		newState.enemyBoard = [...state.enemyBoard];
+		newState.winner = state.winner;
+		return newState;
+	} else if (action.type === 'FREE_TURN') {
+		const value = state.enemyBoard[action.x][action.y];
+		if (value === '1') {
+			state.enemyBoard[action.x][action.y] = '3';
+		} else if (value === '2') {
+			state.enemyBoard[action.x][action.y] = '4';
+		}
+		let count = 0;
+		for (let i = 0; i < 10; i++) {
+			for (let j = 0; j < 10; j++) {
+				if (state.enemyBoard[i][j] === '2') {
+					count++;
+				}
+			}
+		}
+		if (count === 0) {
+			state.winner = 'Player';
+		}
+		const newState = {};
+		newState.myBoard = [...state.myBoard];
+		newState.enemyBoard = [...state.enemyBoard];
+		newState.winner = state.winner;
+		return newState;
+	} else if (action.type === 'RESET') {
+		state.myBoard = initBoard();
+		state.enemyBoard = initBoard();
+		state.winner = '';
+        const newState = {};
+		newState.myBoard = [...state.myBoard];
+		newState.enemyBoard = [...state.enemyBoard];
+		newState.winner = state.winner;
+		return newState;
+>>>>>>> origin/master
 	}
 	return defaultState;
 }

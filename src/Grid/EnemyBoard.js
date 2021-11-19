@@ -2,13 +2,13 @@ import React from 'react';
 import GridItem from './GridItem';
 import { useSelector } from 'react-redux';
 
-export default function EnemyBoard() {
-	let enemyBoard = useSelector((state) => state.enemyBoard);
+export default function EnemyBoard(props) {
+	const enemyBoard = useSelector((state) => state.enemyBoard);
 	const boardComponent = [];
     for (let i = 0; i < enemyBoard.length; i++) {
         let row = enemyBoard[i];
         for (let j = 0; j < row.length; j++) {
-            boardComponent.push((<GridItem symbol={enemyBoard[i][j]} x={i} y={j}/>));
+            boardComponent.push((<GridItem symbol={enemyBoard[i][j]} x={i} y={j} isFree={props.symbol}/>));
         }
     }
 	return (
